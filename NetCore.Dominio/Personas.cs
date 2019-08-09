@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NetCore.Data;
+using System;
 using System.Collections.Generic;
 
 namespace NetCore.Dominio
