@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreApi", "NetCoreApi.cs
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCore.Data", "..\NetCoreEF.Data\NetCoreEF.Data\NetCore.Data.csproj", "{2EC9A28E-8603-4E35-8029-C41FA94CB710}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCore.Dominio", "..\NetCore.Dominio\NetCore.Dominio.csproj", "{693CB9E7-2C07-4462-AA45-2F2D60182AFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCore.Dominio", "..\NetCore.Dominio\NetCore.Dominio.csproj", "{693CB9E7-2C07-4462-AA45-2F2D60182AFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCore.Services", "..\NetCore.Services\NetCore.Services.csproj", "{C5384752-7DB8-4DF0-B3A1-DD90FE9E44C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{693CB9E7-2C07-4462-AA45-2F2D60182AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{693CB9E7-2C07-4462-AA45-2F2D60182AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{693CB9E7-2C07-4462-AA45-2F2D60182AFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5384752-7DB8-4DF0-B3A1-DD90FE9E44C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5384752-7DB8-4DF0-B3A1-DD90FE9E44C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5384752-7DB8-4DF0-B3A1-DD90FE9E44C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5384752-7DB8-4DF0-B3A1-DD90FE9E44C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

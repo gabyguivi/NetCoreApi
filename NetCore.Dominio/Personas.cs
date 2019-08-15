@@ -1,10 +1,12 @@
 ﻿using NetCore.Data;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace NetCore.Dominio
 {
-    public partial class Personas : Entity
+    [Table("Personas")]
+    public partial class Persona
     {
         public int Id { get; set; }
         public string NomyAp { get; set; }

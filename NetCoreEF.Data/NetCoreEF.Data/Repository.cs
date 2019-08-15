@@ -6,23 +6,24 @@ using System.Text;
 
 namespace NetCore.Data
 {
-    public class Repository<T, C> : IRepository<T, C> where T : Entity where C : DbContext
+    public class Repository<TEntity, TContext> : IRepository<TEntity, TContext>
+    where TEntity : class where TContext : DbContext
     {
         #region Propiedades
 
         public DbContext Context { get; }
 
-        private DbSet<T> _entities;
+        private DbSet<TEntity> _entities;
         /// <summary>
         /// Colección de entidades.
         /// </summary>
-        public DbSet<T> Entities
+        public DbSet<TEntity> Entities
         {
             get
             {
                 if (_entities == null)
                 {
-                    _entities = Context.Set<T>();
+                    _entities = Context.Set<TEntity>();
                 }
                 return _entities;
             }
@@ -43,17 +44,17 @@ namespace NetCore.Data
 
         #region Públicos
 
-        public T GetById(object id)
+        public TEntity GetById(object id)
         {
             return this.Entities.Find(id);
         }
 
-        public T GetById(object[] id)
+        public TEntity GetById(object[] id)
         {
             return this.Entities.Find(id);
         }
 
-        public void Insert(T entity)
+        public void Insert(TEntity entity)
         {
             if (entity == null)
             {
@@ -62,7 +63,7 @@ namespace NetCore.Data
             this.Entities.Add(entity);
         }
 
-        public void Update(T entity)
+        public void Update(TEntity entity)
         {
             if (entity == null)
             {
@@ -71,7 +72,7 @@ namespace NetCore.Data
             ((DbContext)Context).Entry(entity).State = EntityState.Modified;
         }
 
-        public void Delete(T entity)
+        public void Delete(TEntity entity)
         {
             if (entity == null)
             {
@@ -82,7 +83,7 @@ namespace NetCore.Data
         
         #region Virtuales
 
-        public virtual IQueryable<T> GetAll
+        public virtual IQueryable<TEntity> GetAll
         {
             get
             {

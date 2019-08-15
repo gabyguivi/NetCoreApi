@@ -5,8 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNet.Razor" Version="3.2.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NetCore.Dominio\NetCore.Dominio.csproj" />
+    <ProjectReference Include="..\NetCoreEF.Data\NetCoreEF.Data\NetCore.Data.csproj" />
   </ItemGroup>
 
 </Project>

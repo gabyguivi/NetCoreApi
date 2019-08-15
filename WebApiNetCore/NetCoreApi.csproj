@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NetCore.Dominio\NetCore.Dominio.csproj" />
+    <ProjectReference Include="..\NetCore.Services\NetCore.Services.csproj" />
     <ProjectReference Include="..\NetCoreEF.Data\NetCoreEF.Data\NetCore.Data.csproj" />
   </ItemGroup>
 

@@ -16,7 +16,7 @@ namespace NetCore.Data
         {
         }
 
-        public virtual DbSet<Personas> Personas { get; set; }
+        public virtual DbSet<Persona> Personas { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {            
@@ -26,7 +26,7 @@ namespace NetCore.Data
         {
             modelBuilder.HasAnnotation("ProductVersion", "2.2.6-servicing-10079");
 
-            modelBuilder.Entity<Personas>(entity =>
+            modelBuilder.Entity<Persona>(entity =>
             {
                 entity.Property(e => e.Direccion)
                     .HasMaxLength(100)
