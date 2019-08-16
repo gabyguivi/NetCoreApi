@@ -11,7 +11,7 @@ namespace NetCore.Data
     {
         #region Propiedades
 
-        public DbContext Context { get; }
+        public IContext<TContext> Context { get; }
 
         private DbSet<TEntity> _entities;
         /// <summary>
@@ -33,7 +33,7 @@ namespace NetCore.Data
 
         #region Constructor
 
-        public Repository(DbContext context)
+        public Repository(IContext<TContext> context)
         {
             this.Context = context;
         }

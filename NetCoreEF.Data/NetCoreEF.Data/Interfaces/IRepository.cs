@@ -12,7 +12,7 @@ namespace NetCore.Data
         /// <summary>
         /// Contexto actual.
         /// </summary>
-        DbContext Context { get; }
+        IContext<TContext> Context { get; }
 
         /// <summary>
         /// Obtiene el objeto mediante el Id en la base de datos.

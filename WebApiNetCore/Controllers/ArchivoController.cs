@@ -11,11 +11,11 @@ namespace WebApiNetCore.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PersonaController : ControllerBase
+    public class ArchivoController : ControllerBase
     {
-        private PersonaService servicio;
+        private ArchivoService servicio;
 
-        public PersonaController(PersonaService s) 
+        public ArchivoController(ArchivoService s) 
         {
             servicio = s;
         }

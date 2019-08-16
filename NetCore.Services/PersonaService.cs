@@ -5,9 +5,9 @@ using System;
 
 namespace NetCore.Services
 {
-    public class PersonaService : BaseService<Persona, ProyectoFinalContext>
+    public class PersonaService : BaseService<Persona, PrincipalContext>
     {
-        public PersonaService(IRepository<Persona, ProyectoFinalContext> repository) : base(repository) { }
+        public PersonaService(IRepository<Persona, PrincipalContext> repository) : base(repository) { }
 
     }
 }

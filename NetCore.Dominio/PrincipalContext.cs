@@ -5,13 +5,13 @@ using NetCore.Dominio;
 
 namespace NetCore.Data
 {
-    public partial class ProyectoFinalContext : DbContext
+    public partial class PrincipalContext : DbContext, IContext<PrincipalContext>
     {
-        public ProyectoFinalContext()
+        public PrincipalContext()
         {
         }
 
-        public ProyectoFinalContext(DbContextOptions<ProyectoFinalContext> options)
+        public PrincipalContext(DbContextOptions<PrincipalContext> options)
             : base(options)
         {
         }
