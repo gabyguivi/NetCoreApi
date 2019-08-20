@@ -13,17 +13,17 @@ namespace WebApiNetCore.Controllers
     [ApiController]
     public class PersonaController : ControllerBase
     {
-        private PersonaService servicio;
+        private PersonaService service;
 
         public PersonaController(PersonaService s) 
         {
-            servicio = s;
+            service = s;
         }
         // GET api/persona
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return Ok(servicio.GetAll());
+            return Ok(service.GetAll());
         }
 
         // GET api/persona/5

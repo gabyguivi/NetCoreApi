@@ -30,10 +30,9 @@ namespace WebApiNetCore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<PrincipalContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:DefaultDataBase"]));
-            services.AddDbContext<PrincipalContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:DefaultDataBase"]));
             services.AddScoped<IContext<PrincipalContext>>(provider => provider.GetService<PrincipalContext>());            
             services.AddScoped(typeof(IRepository<,>), typeof(Repository<,>));
-            services.AddScoped(typeof(IService<Persona, PrincipalContext>), typeof(PersonaService));
+            services.AddScoped(typeof(IService<,>),typeof(BaseService<Persona,PrincipalContext>));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);            
         }
 
