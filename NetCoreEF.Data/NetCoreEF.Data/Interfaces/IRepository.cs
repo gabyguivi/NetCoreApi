@@ -45,7 +45,13 @@ namespace NetCore.Data
         /// </summary>
         /// <param name="entity">Entidad.</param>
         void Delete(TEntity entity);
-      
+
+        /// <summary>
+        /// Elimina una entidad del dbContext.
+        /// </summary>
+        /// <param name="entity">Entidad.</param>
+        void Detach(TEntity entity);
+
         /// <summary>
         /// Obtiene todos los registros existentes de un objeto en la base de datos.
         /// </summary>

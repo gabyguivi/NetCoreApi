@@ -80,7 +80,15 @@ namespace NetCore.Data
             }
             this.Entities.Remove(entity);
         }
-        
+
+        public void Detach(TEntity entity)
+        {
+            if (entity == null)
+            {
+                throw new ArgumentNullException("entity");
+            }
+            ((DbContext)Context).Entry(entity).State = EntityState.Detached;
+        }
         #region Virtuales
 
         public virtual IQueryable<TEntity> GetAll
